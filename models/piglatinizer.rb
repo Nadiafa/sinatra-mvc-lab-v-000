@@ -35,7 +35,7 @@ class PigLatinizer
     end
     
     if /^[^aeiou\W]/i.match(first_letter)
-       consonants
+      consonants
     else
       vowels
     end
