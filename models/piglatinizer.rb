@@ -27,7 +27,7 @@ class PigLatinizer
 
 
 def consonant
-  if consonant
+  if words.match(/[aAeEiIoOuU]/)
     return true
   end
 end
