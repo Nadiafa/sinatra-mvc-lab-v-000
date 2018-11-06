@@ -24,10 +24,9 @@ class PigLatinizer
     
     words.each do |w|
       first_letter = w[0]
-      case 
-        when first_letter.match(/[aAeEiIoOuU]/)
+      if /^[^aeiou\W]/i.match(first_letter)
          w.split("").rotate(1).join("")
-      elsif first_letter.match(/[aAeEiIoOuU]/)
+      else
         w.concat("w")
       else 
         w
