@@ -23,12 +23,12 @@ class PigLatinizer
     
     
     words.each do |w|
-      first_letter = w[0]
-      if /^[^aeiou\W]/i.match(first_letter)
-         w.split("").rotate(1).join("")
-      else
-        w.concat("w")
-      end 
+      if /^[^aeiou\W]/i.match(w)
+        w = w.split("").rotate(1).join("")
+        w
+      else 
+        w = w.concat("w")
+      end
     end
     
     
