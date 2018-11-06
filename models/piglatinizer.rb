@@ -28,8 +28,6 @@ class PigLatinizer
          w.split("").rotate(1).join("")
       else
         w.concat("w")
-      else 
-        w
       end 
     end
     
