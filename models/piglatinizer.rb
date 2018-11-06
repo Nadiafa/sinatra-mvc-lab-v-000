@@ -1,39 +1,12 @@
 class PigLatinizer
-  attr_accessor :phrase
-  
-  def initialize(phrase)
-    @phrase = phrase
-  end 
-  
-  def piglatinize
-    "THIS IS THE RESULT"
-    
-    words = phrase.split(" ")
-  
-    words.each do |w|
-      first_letter = w[0]
-      if !first_letter.match(/[aAeEiIoOuU]/)
-         w.split("").rotate(1).join("")
-      elsif first_letter.match(/[aAeEiIoOuU]/)
-        w.concat("w")
-      else 
-        w
-      end 
-    end
-    
-    words.join(" ")
-  end 
-end
 
+  def piglatinize(input_str)
+    x = (input_str.split(" ").length == 1) ? piglatinize_word(input_str) : piglatinize_sentence(input_str)
+    puts x
+    x
+  end
 
-
-# def piglatinize(input_str)
-#     x = (input_str.split(" ").length == 1) ? piglatinize_word(input_str) : piglatinize_sentence(input_str)
-#     puts x
-#     x
-#   end
-
-#   private
+  private
 
   def consonant?(char)
     !char.match(/[aAeEiIoOuU]/)
@@ -56,6 +29,8 @@ end
     word << "ay"
   end
 
-#   def piglatinize_sentence(sentence)
-#     sentence.split.collect { |word| piglatinize_word(word) }.join(" ")
-#   end
+  def piglatinize_sentence(sentence)
+    sentence.split.collect { |word| piglatinize_word(word) }.join(" ")
+  end
+end
+
