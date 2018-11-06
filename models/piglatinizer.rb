@@ -34,8 +34,8 @@ class PigLatinizer
 
 
 def consonant
-  if w.consonant
-    w = w.split("").rotate(1).join("")
+  if consonant
+    return true
   end
 end
     
