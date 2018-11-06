@@ -31,7 +31,7 @@ class PigLatinizer
       end 
     end
     
-    if /^[^aeiou\W]/i.match(first_letter)
+    if /^[^aeiou\W]/i.match(words)
       return false 
     else
       return true
