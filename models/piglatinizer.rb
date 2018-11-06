@@ -34,9 +34,9 @@ end
     
     words.each do |w|
       if w.consonant
-        w.split("").rotate(1).join("")
+        w = w.split("").rotate(1).join("")
       else 
-        w.concat("w")
+        w = w.concat("w")
       end
     end 
     
