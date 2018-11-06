@@ -22,14 +22,7 @@ class PigLatinizer
     end
     
     
-    words.each do |w|
-      if /^[^aeiou\W]/i.match(w)
-        w = w.split("").rotate(1).join("")
-        w
-      else 
-        w = w.concat("w")
-      end
-    end
+   
     
 
 
@@ -39,7 +32,13 @@ def consonant
   end
 end
     
-    
+    words.each do |w|
+      if w.consonant
+        w = w.split("").rotate(1).join("")
+      else 
+        w = w.concat("w")
+      end
+    end 
     
     
     
