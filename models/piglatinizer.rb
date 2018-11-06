@@ -22,6 +22,19 @@ class PigLatinizer
     end
     
     
+    words.each do |w|
+      first_letter = w[0]
+      case 
+        when first_letter.match(/[aAeEiIoOuU]/)
+         w.split("").rotate(1).join("")
+      elsif first_letter.match(/[aAeEiIoOuU]/)
+        w.concat("w")
+      else 
+        w
+      end 
+    end
+    
+    
     
     
     
