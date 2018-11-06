@@ -34,7 +34,11 @@ class PigLatinizer
       end 
     end
     
-    
+    if /^[^aeiou\W]/i.match(first_letter)
+     consonants
+  else
+    vowels
+  end
     
     
     
