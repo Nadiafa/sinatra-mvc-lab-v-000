@@ -33,10 +33,10 @@ class PigLatinizer
     
     words.each do |w|
       case 
-        when /^[^aeiou\W]/i.match(w)
-          w = w.split("").rotate(1).join("")
-        when  !/^[^aeiou\W]/i.match(w)
-          w = w.concat("w")
+      when /^[^aeiou\W]/i.match(w)
+        w = w.split("").rotate(1).join("")
+      else
+        w = w.concat("w")
       end
     end
     
