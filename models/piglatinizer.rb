@@ -31,14 +31,14 @@ class PigLatinizer
       end
     end
     
-    words.each do |w|
-      case 
-      when /^[^aeiou\W]/i.match(w)
-        w = w.split("").rotate(1).join("")
-      else
-        w = w.concat("w")
-      end
-    end
+
+
+def consonant
+  if w.consonant
+    w = w.split("").rotate(1).join("")
+  end
+end
+    
     
     
     
