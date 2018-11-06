@@ -13,9 +13,9 @@ class PigLatinizer
     words.each do |w|
       first_letter = w[0]
       if first_letter.match(/[aAeEiIoOuU]/)
-         w.concat("way")
+         w.concat("w")
       elsif !first_letter.match(/[aAeEiIoOuU]/)
-        w.split("").rotate(1).join("")+"ay"
+        w.split("").rotate(1).join("")
       end 
     end
     words.join(" ")
